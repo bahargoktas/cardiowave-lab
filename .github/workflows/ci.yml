@@ -15,4 +15,4 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python -m pip install -e ".[dev]"
       - run: python -m pytest -q
-      - run: python -m cardiowave --subjects 9 --windows-per-class 1 --sample-rate 50 --seconds 4 --output outputs/metrics.json
+      - run: python -m cardiowave --subjects 9 --windows-per-class 1 --sample-rate 50 --seconds 4 --cnn-epochs 1 --output outputs/metrics.json
